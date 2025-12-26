@@ -1,0 +1,21 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "api/index.py",
+      "use": "@vercel/python"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "api/index.py"
+    }
+  ],
+  "env": {
+    "DATABASE_URL": "@neon_database_url",
+    "JWT_SECRET": "@jwt_secret",
+    "ALLOWED_ORIGINS": "@frontend_url",
+    "LLM7_API_KEY": "@llm7_api_key"
+  }
+}
