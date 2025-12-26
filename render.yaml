@@ -1,0 +1,25 @@
+services:
+  - type: web
+    name: ai-expensetracker-api
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /health
+    envVars:
+      - key: PORT
+        value: 8000
+      - key: DATABASE_URL
+        fromDatabase:
+          name: expenses-db
+          property: connectionString
+      - key: JWT_SECRET
+        generateValue: true
+      - key: LLM7_API_KEY
+        sync: false
+
+databases:
+  - name: expenses-db
+    databaseName: expenses_db
+    user: postgres
+    plan: free
