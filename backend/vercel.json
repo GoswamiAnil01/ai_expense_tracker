@@ -13,9 +13,11 @@
     }
   ],
   "env": {
-    "DATABASE_URL": "@neon_database_url",
-    "JWT_SECRET": "@jwt_secret",
-    "ALLOWED_ORIGINS": "@frontend_url",
-    "LLM7_API_KEY": "@llm7_api_key"
+    "DATABASE_URL": "postgresql://neondb_owner:npg_WyB4rGw9UhSj@ep-young-paper-ahpabsk3-pooler.c-3.us-east-1.aws.neon.tech/neondb?sslmode=require&channel_binding=require",
+    "JWT_SECRET": "e2OlR4J3es-a8M_Bhh38yw1z3R2B5WVdpLwKX4YWYZ4",
+    "ALLOWED_ORIGINS": "https://your-frontend-url.vercel.app",
+    "LLM7_API_KEY": "3wKocpDhMqeMxUT6yr2hsgnVkddNZGNnGuT8lnoFoolbgKOs4PTyx4/sPWGD8fXZ+aogRSiDuIT3MMgFZ3/zX2t86LNbPT3RbHcG/dsbd19PXf9urDM32MfTbHp+96jstmD5eQ==",
+    "MAX_FILE_SIZE": "5242880",
+    "MODEL_PROVIDER": "llm7"
   }
 }
